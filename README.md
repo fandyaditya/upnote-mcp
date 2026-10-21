@@ -1,4 +1,4 @@
-# @fandyaditya/upnote-mcp
+# @fandydev/upnote-mcp
 
 An MCP server that lets AI agents create, revise and read notes in [UpNote](https://getupnote.com).
 
@@ -22,25 +22,25 @@ An agent can:
 Add the server to your agent. The command it runs is:
 
 ```bash
-npx -y @fandyaditya/upnote-mcp
+npx -y @fandydev/upnote-mcp
 ```
 
 ### Claude Code
 
 ```bash
-claude mcp add --scope user upnote -- npx -y @fandyaditya/upnote-mcp
+claude mcp add --scope user upnote -- npx -y @fandydev/upnote-mcp
 ```
 
 ### Codex
 
 ```bash
-codex mcp add upnote -- npx -y @fandyaditya/upnote-mcp
+codex mcp add upnote -- npx -y @fandydev/upnote-mcp
 ```
 
 ### Pi
 
 ```bash
-pi mcp add upnote -- npx -y @fandyaditya/upnote-mcp
+pi mcp add upnote -- npx -y @fandydev/upnote-mcp
 ```
 
 ### OpenCode
@@ -52,7 +52,7 @@ Add this to `~/.config/opencode/opencode.json`:
   "mcp": {
     "upnote": {
       "type": "local",
-      "command": ["npx", "-y", "@fandyaditya/upnote-mcp"],
+      "command": ["npx", "-y", "@fandydev/upnote-mcp"],
       "enabled": true
     }
   }
@@ -68,7 +68,7 @@ Add this to `~/.cursor/mcp.json`:
   "mcpServers": {
     "upnote": {
       "command": "npx",
-      "args": ["-y", "@fandyaditya/upnote-mcp"]
+      "args": ["-y", "@fandydev/upnote-mcp"]
     }
   }
 }
@@ -76,20 +76,20 @@ Add this to `~/.cursor/mcp.json`:
 
 ### Any other agent
 
-Register a stdio server with command `npx` and arguments `-y @fandyaditya/upnote-mcp`.
+Register a stdio server with command `npx` and arguments `-y @fandydev/upnote-mcp`.
 
 Restart your agent after adding the server, then ask it: "List my UpNote notebooks."
 
-OpenCode and Cursor were not tested with the real apps. On native Windows, if `npx` does not start, use `cmd` with arguments `/c npx -y @fandyaditya/upnote-mcp`.
+OpenCode and Cursor were not tested with the real apps. On native Windows, if `npx` does not start, use `cmd` with arguments `/c npx -y @fandydev/upnote-mcp`.
 
 ### Read-only mode
 
 Set `UPNOTE_READONLY=1` to remove all tools that change UpNote:
 
 ```bash
-claude mcp add --scope user upnote -e UPNOTE_READONLY=1 -- npx -y @fandyaditya/upnote-mcp
-codex mcp add upnote --env UPNOTE_READONLY=1 -- npx -y @fandyaditya/upnote-mcp
-pi mcp add upnote --env UPNOTE_READONLY=1 -- npx -y @fandyaditya/upnote-mcp
+claude mcp add --scope user upnote -e UPNOTE_READONLY=1 -- npx -y @fandydev/upnote-mcp
+codex mcp add upnote --env UPNOTE_READONLY=1 -- npx -y @fandydev/upnote-mcp
+pi mcp add upnote --env UPNOTE_READONLY=1 -- npx -y @fandydev/upnote-mcp
 ```
 
 For Cursor, add `"env": { "UPNOTE_READONLY": "1" }`. For OpenCode, add `"environment": { "UPNOTE_READONLY": "1" }`.
@@ -114,7 +114,7 @@ Install the UpNote MCP server for yourself.
 1. Check that Node.js is version 22.13 or newer and that UpNote is installed.
 2. Ask me: full access (create and revise notes) or read-only?
 3. Tell me the exact command or config change for your own client, and wait for my OK.
-   The package is @fandyaditya/upnote-mcp, run with: npx -y @fandyaditya/upnote-mcp
+   The package is @fandydev/upnote-mcp, run with: npx -y @fandydev/upnote-mcp
    Read-only means setting the environment variable UPNOTE_READONLY=1.
 4. Apply it, then tell me to restart you.
 5. After the restart, call list_notebooks to check that it works.

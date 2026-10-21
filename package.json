@@ -1,5 +1,5 @@
 {
-  "name": "@fandyaditya/upnote-mcp",
+  "name": "@fandydev/upnote-mcp",
   "version": "0.1.0",
   "description": "Unofficial MCP server for UpNote: create and revise notes (tables, images, checklists) through UpNote's URL scheme, and read them from the local database in read-only mode",
   "type": "module",
